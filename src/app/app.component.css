@@ -1,0 +1,49 @@
+.center {
+  width: 50%;
+  margin: auto;
+}
+
+.base {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.report {
+  padding-top: 10px;
+}
+
+.dropdown {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+td:not(:first-child) {
+  text-align: center;
+}
+
+th:not(:first-child) {
+  text-align: center;
+}
+
+td.red {
+  color: white;
+  background-color: indianred;
+}
+
+td.green {
+  color: white;
+  background-color: green;
+}
+
+td.orange {
+  color: white;
+  background-color: orange;
+}
+
+.loading-spinner {
+  padding-top: 100px;
+}
