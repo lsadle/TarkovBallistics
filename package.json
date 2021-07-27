@@ -2,6 +2,8 @@
   "name": "tarkov-ballistics",
   "version": "0.0.0",
   "main": "app.js",
+  "author": "Lucas Sadle",
+  "description": "An Electron/Angular app that scraps fandom's Tarkov Balistics page and presents a subset of data",
   "scripts": {
     "ng": "ng",
     "run": "ng build --watch && ng serve",
