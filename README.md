@@ -3,4 +3,5 @@ An Electron/Angular app that scraps fandom's Tarkov Balistics page and presents 
 
 
 * Run application with 'npm start'
-* Deploy application with 'npm run make'
+* Create distributables for deployment with 'npm run make'
+  * Outputs to '/out/' 
