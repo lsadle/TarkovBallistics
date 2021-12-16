@@ -1,5 +1,5 @@
 # TarkovBallistics
-An Electron/Angular app that scraps fandom's Tarkov Balistics page and presents a subset of data
+An Electron/Angular app that scraps fandom's Tarkov Ballistics page and presents a subset of data
 
 
 * Run application with 'npm start'
