@@ -47,3 +47,8 @@ td.orange {
 .loading-spinner {
   padding-top: 100px;
 }
+
+.table-container {
+  overflow: auto;
+  max-height: calc(100vh - 84px);
+}

@@ -15,55 +15,57 @@
       </mat-form-field>
     </div>
 
-    <table mat-table [dataSource]="selectedReports" class="mat-elevation-z8">
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-      </ng-container>
+    <div class="table-container">
+      <table mat-table [dataSource]="selectedReports" class="mat-elevation-z8">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
 
-      <ng-container matColumnDef="damage">
-        <th mat-header-cell *matHeaderCellDef> Damage </th>
-        <td mat-cell *matCellDef="let element"> {{element.damage}} </td>
-      </ng-container>
+        <ng-container matColumnDef="damage">
+          <th mat-header-cell *matHeaderCellDef> Damage </th>
+          <td mat-cell *matCellDef="let element"> {{element.damage}} </td>
+        </ng-container>
 
-      <ng-container matColumnDef="class1">
-        <th mat-header-cell *matHeaderCellDef> Class 1 </th>
-        <td mat-cell *matCellDef="let element"
-        [ngClass]="[element.class1 < 3 ? 'red': element.class1 > 4 ? 'green' : 'orange']"> {{element.class1}} </td>
-      </ng-container>
+        <ng-container matColumnDef="class1">
+          <th mat-header-cell *matHeaderCellDef> Class 1 </th>
+          <td mat-cell *matCellDef="let element"
+          [ngClass]="[element.class1 < 3 ? 'red': element.class1 > 4 ? 'green' : 'orange']"> {{element.class1}} </td>
+        </ng-container>
 
-      <ng-container matColumnDef="class2">
-        <th mat-header-cell *matHeaderCellDef> Class 2 </th>
-        <td mat-cell *matCellDef="let element"
-            [ngClass]="[element.class2 < 3 ? 'red': element.class2 > 4 ? 'green' : 'orange']"> {{element.class2}} </td>
-      </ng-container>
+        <ng-container matColumnDef="class2">
+          <th mat-header-cell *matHeaderCellDef> Class 2 </th>
+          <td mat-cell *matCellDef="let element"
+              [ngClass]="[element.class2 < 3 ? 'red': element.class2 > 4 ? 'green' : 'orange']"> {{element.class2}} </td>
+        </ng-container>
 
-      <ng-container matColumnDef="class3">
-        <th mat-header-cell *matHeaderCellDef> Class 3 </th>
-        <td mat-cell *matCellDef="let element"
-            [ngClass]="[element.class3 < 3 ? 'red': element.class3 > 4 ? 'green' : 'orange']"> {{element.class3}} </td>
-      </ng-container>
+        <ng-container matColumnDef="class3">
+          <th mat-header-cell *matHeaderCellDef> Class 3 </th>
+          <td mat-cell *matCellDef="let element"
+              [ngClass]="[element.class3 < 3 ? 'red': element.class3 > 4 ? 'green' : 'orange']"> {{element.class3}} </td>
+        </ng-container>
 
-      <ng-container matColumnDef="class4">
-        <th mat-header-cell *matHeaderCellDef> Class 4 </th>
-        <td mat-cell *matCellDef="let element"
-            [ngClass]="[element.class4 < 3 ? 'red': element.class4 > 4 ? 'green' : 'orange']"> {{element.class4}} </td>
-      </ng-container>
+        <ng-container matColumnDef="class4">
+          <th mat-header-cell *matHeaderCellDef> Class 4 </th>
+          <td mat-cell *matCellDef="let element"
+              [ngClass]="[element.class4 < 3 ? 'red': element.class4 > 4 ? 'green' : 'orange']"> {{element.class4}} </td>
+        </ng-container>
 
-      <ng-container matColumnDef="class5">
-        <th mat-header-cell *matHeaderCellDef> Class 5 </th>
-        <td mat-cell *matCellDef="let element"
-            [ngClass]="[element.class5 < 3 ? 'red': element.class5 > 4 ? 'green' : 'orange']"> {{element.class5}} </td>
-      </ng-container>
+        <ng-container matColumnDef="class5">
+          <th mat-header-cell *matHeaderCellDef> Class 5 </th>
+          <td mat-cell *matCellDef="let element"
+              [ngClass]="[element.class5 < 3 ? 'red': element.class5 > 4 ? 'green' : 'orange']"> {{element.class5}} </td>
+        </ng-container>
 
-      <ng-container matColumnDef="class6">
-        <th mat-header-cell *matHeaderCellDef> Class 6 </th>
-        <td mat-cell *matCellDef="let element"
-            [ngClass]="[element.class6 < 3 ? 'red': element.class6 > 4 ? 'green' : 'orange']"> {{element.class6}} </td>
-      </ng-container>
+        <ng-container matColumnDef="class6">
+          <th mat-header-cell *matHeaderCellDef> Class 6 </th>
+          <td mat-cell *matCellDef="let element"
+              [ngClass]="[element.class6 < 3 ? 'red': element.class6 > 4 ? 'green' : 'orange']"> {{element.class6}} </td>
+        </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
   </div>
 </div>

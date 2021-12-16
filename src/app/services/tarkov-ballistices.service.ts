@@ -26,18 +26,26 @@ export class TarkovBallisticesService {
       // tslint:disable-next-line:prefer-for-of
       for (let i = 3; i < rows.length; i++) {
         const row = rows[i];
+        const cells = row.getElementsByTagName('td');
+        const startIndex = (cells.length === 16) ? 1 : 0;
+
         // Start of new section / end of last section
-        if (row.id) {
+        if (startIndex === 1) {
           if (lastId) {
             fullReport.set(lastId, caliberArray);
           }
-          lastId = row.id.replace('_anchor', '').split('_').join(' ');
+          if (row.id) {
+            lastId = row.id.replace('_anchor', '').split('_').join(' ');
+          } else if (cells[0].getElementsByTagName('a').length > 0) {
+            lastId = cells[0].getElementsByTagName('a')[0].innerText.replace('\n', '');
+          } else {
+            lastId = 'Unknown';
+          }
+
           caliberArray = [];
         }
 
         const report = new BallisticReport();
-        const cells = row.getElementsByTagName('td');
-        const startIndex = (row.id) ? 1 : 0;
 
         report.caliber = lastId;
         report.name = cells[startIndex + 0].getElementsByTagName('a')[0].innerText.replace('\n', '');
