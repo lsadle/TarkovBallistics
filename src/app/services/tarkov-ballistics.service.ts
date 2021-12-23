@@ -7,7 +7,7 @@ import { BallisticReport } from '../models/ballistic-report';
 @Injectable({
   providedIn: 'root'
 })
-export class TarkovBallisticesService {
+export class TarkovBallisticsService {
 
   constructor(private client: HttpClient) { }
 
@@ -55,7 +55,7 @@ export class TarkovBallisticesService {
         report.accuracyPercent = cells[startIndex + 4].innerText.replace('\n', '');
         report.recoilPercent = cells[startIndex + 5].innerText.replace('\n', '');
         report.fragChance = cells[startIndex + 6].innerText.replace('\n', '');
-        report.bleedLow = cells[startIndex + 6].innerText.replace('\n', '');
+        report.bleedLow = cells[startIndex + 7].innerText.replace('\n', '');
         report.bleedHigh = cells[startIndex + 8].innerText.replace('\n', '');
         report.class1 = cells[startIndex + 9].innerText.replace('\n', '');
         report.class2 = cells[startIndex + 10].innerText.replace('\n', '');

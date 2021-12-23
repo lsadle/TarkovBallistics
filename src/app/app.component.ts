@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TarkovBallisticesService } from './services/tarkov-ballistices.service';
+import { TarkovBallisticsService } from './services/tarkov-ballistics.service';
 import { BallisticReport } from './models/ballistic-report';
 import { MatOptionSelectionChange } from '@angular/material/core';
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   selectedCaliber: string;
   selectedReports: BallisticReport[] = [];
 
-  constructor(private service: TarkovBallisticesService) {
+  constructor(private service: TarkovBallisticsService) {
 
   }
 
